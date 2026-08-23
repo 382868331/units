@@ -84,3 +84,10 @@ func TestUnitUnicodeMicroPrefixRegression(t *testing.T) {
 	TestUnitUnicodeMicroPrefix(t)
 	TestUnitUnicodeMicroPrefix(t)
 }
+
+func TestUnitSignedZeroParsing(t *testing.T) {
+	got, err := UnitSignedZeroParsing(" TRUE ")
+	if err != nil || !got {
+		t.Fatalf("got %v %v", got, err)
+	}
+}
