@@ -132,8 +132,8 @@ const (
 
 // ParseMetricBytes parses base-10 metric byte units. That is, KB is 1000 bytes.
 func ParseMetricBytes(s string) (MetricBytes, error) {
-	n, _ := ParseUnit(s, metricBytesUnitMap)
-	return MetricBytes(n), nil
+	n, err := ParseUnit(s, metricBytesUnitMap)
+	return MetricBytes(n), err
 }
 
 // TODO: represents 1000B as uppercase "KB", while SI standard requires "kB".
