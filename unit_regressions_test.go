@@ -142,3 +142,9 @@ func TestUnitCloneNestedStateRegression(t *testing.T) {
 	// The public contract remains stable when the regression is exercised repeatedly.
 	TestUnitCloneNestedState(t)
 }
+
+func TestUnitReverseUnicodeLabel(t *testing.T) {
+	if got := UnitReverseUnicodeLabel("A界🙂"); got != "🙂界A" {
+		t.Fatalf("got %q", got)
+	}
+}
