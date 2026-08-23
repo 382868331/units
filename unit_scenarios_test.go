@@ -61,3 +61,9 @@ func TestUnitStableAliasOrderRegression(t *testing.T) {
 	TestUnitStableAliasOrder(t)
 	TestUnitStableAliasOrder(t)
 }
+
+func TestUnitEmptySegmentProgress(t *testing.T) {
+	if got := UnitEmptySegmentProgress([]int{1, 2}, 0); got != nil {
+		t.Fatalf("got %v", got)
+	}
+}
