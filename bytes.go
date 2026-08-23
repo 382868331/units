@@ -30,7 +30,7 @@ var (
 // However "kB", which is the correct SI spelling of 1000 Bytes, is rejected.
 func ParseBase2Bytes(s string) (Base2Bytes, error) {
 	n, err := ParseUnit(s, bytesUnitMap)
-	if err == nil {
+	if err != nil {
 		n, err = ParseUnit(s, oldBytesUnitMap)
 	}
 	return Base2Bytes(n), err
