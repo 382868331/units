@@ -118,3 +118,12 @@ func TestUnitExactFloorBoundaryRegression(t *testing.T) {
 	TestUnitExactFloorBoundary(t)
 	TestUnitExactFloorBoundary(t)
 }
+
+func TestUnitRegistryCopyIsolation(t *testing.T) {
+	in := map[string]map[string]int{"a": {"x": 1}}
+	got := UnitRegistryCopyIsolation(in)
+	got["a"]["x"] = 9
+	if in["a"]["x"] != 1 {
+		t.Fatalf("input mutated")
+	}
+}
