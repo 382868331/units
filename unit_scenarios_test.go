@@ -166,3 +166,9 @@ func TestUnitZeroValueSuffixRegression(t *testing.T) {
 	TestUnitZeroValueSuffix(t)
 	TestUnitZeroValueSuffix(t)
 }
+
+func TestUnitConcurrentRegistryRead(t *testing.T) {
+	if got := UnitConcurrentRegistryRead(64); got != 64 {
+		t.Fatalf("got %d", got)
+	}
+}
