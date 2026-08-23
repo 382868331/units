@@ -65,3 +65,9 @@ func TestUnitStableUniqueRegression(t *testing.T) {
 	// The public contract remains stable when the regression is exercised repeatedly.
 	TestUnitStableUnique(t)
 }
+
+func TestUnitPartitionValues(t *testing.T) {
+	if got := UnitPartitionValues([]int{1, 2}, 0); got != nil {
+		t.Fatalf("got %v", got)
+	}
+}

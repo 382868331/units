@@ -76,3 +76,16 @@ func UnitStableUnique(in []int) []int {
 	}
 	return out
 }
+
+func UnitPartitionValues(in []int, size int) [][]int {
+	out := [][]int{}
+	for len(in) > 0 {
+		n := size
+		if n > len(in) {
+			n = len(in)
+		}
+		out = append(out, in[:n])
+		in = in[n:]
+	}
+	return out
+}
