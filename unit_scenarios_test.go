@@ -222,3 +222,8 @@ func TestUnitAliasIteratorRemoval(t *testing.T) {
 		t.Fatalf("got %v", got)
 	}
 }
+
+func TestUnitAliasIteratorRemovalRegression(t *testing.T) {
+	TestUnitAliasIteratorRemoval(t)
+	TestUnitAliasIteratorRemoval(t)
+}
