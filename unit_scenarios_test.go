@@ -138,3 +138,8 @@ func TestUnitNegativeFormatting(t *testing.T) {
 		t.Fatalf("got %q", got)
 	}
 }
+
+func TestUnitNegativeFormattingRegression(t *testing.T) {
+	TestUnitNegativeFormatting(t)
+	TestUnitNegativeFormatting(t)
+}
