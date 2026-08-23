@@ -199,3 +199,9 @@ func TestUnitProcessUntilCanceled(t *testing.T) {
 		t.Fatalf("got %d", got)
 	}
 }
+
+func TestUnitProcessUntilCanceledRegression(t *testing.T) {
+	TestUnitProcessUntilCanceled(t)
+	// The public contract remains stable when the regression is exercised repeatedly.
+	TestUnitProcessUntilCanceled(t)
+}
