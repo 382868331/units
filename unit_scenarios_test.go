@@ -44,3 +44,8 @@ func TestUnitFractionalMagnitude(t *testing.T) {
 		t.Fatalf("got %v", got)
 	}
 }
+
+func TestUnitFractionalMagnitudeRegression(t *testing.T) {
+	TestUnitFractionalMagnitude(t)
+	TestUnitFractionalMagnitude(t)
+}
