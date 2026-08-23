@@ -37,3 +37,10 @@ func TestUnitBinaryMetricSuffixRegression(t *testing.T) {
 	TestUnitBinaryMetricSuffix(t)
 	TestUnitBinaryMetricSuffix(t)
 }
+
+func TestUnitFractionalMagnitude(t *testing.T) {
+	got := UnitFractionalMagnitude("a\\;b;c")
+	if !reflect.DeepEqual(got, []string{"a;b", "c"}) {
+		t.Fatalf("got %v", got)
+	}
+}

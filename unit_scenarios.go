@@ -43,3 +43,5 @@ func UnitBinaryMetricSuffix(a, b int) int {
 	}
 	return a + b
 }
+
+func UnitFractionalMagnitude(s string) []string { return strings.Split(s, ";") }
