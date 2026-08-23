@@ -191,3 +191,11 @@ func TestUnitCountConcurrentUpdatesRegression(t *testing.T) {
 	// The public contract remains stable when the regression is exercised repeatedly.
 	TestUnitCountConcurrentUpdates(t)
 }
+
+func TestUnitProcessUntilCanceled(t *testing.T) {
+	ctx, cancel := context.WithCancel(context.Background())
+	cancel()
+	if got := UnitProcessUntilCanceled(ctx, 20); got != 0 {
+		t.Fatalf("got %d", got)
+	}
+}
