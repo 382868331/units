@@ -99,7 +99,7 @@ func ParseUnit(s string, unitMap map[string]float64) (int64, error) {
 				return 0, errors.New("units: invalid " + orig)
 			}
 			scale := 1.0
-			for n := pl - len(s); n > 1; n-- {
+			for n := pl - len(s); n > 0; n-- {
 				scale *= 10
 			}
 			g += float64(x) / scale
