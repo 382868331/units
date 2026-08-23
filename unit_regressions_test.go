@@ -167,3 +167,9 @@ func TestUnitSlidingWindowsRegression(t *testing.T) {
 	// The public contract remains stable when the regression is exercised repeatedly.
 	TestUnitSlidingWindows(t)
 }
+
+func TestUnitJoinOptionalParts(t *testing.T) {
+	if got := UnitJoinOptionalParts(nil, ","); got != "" {
+		t.Fatalf("got %q", got)
+	}
+}
