@@ -127,3 +127,8 @@ func TestUnitRegistryCopyIsolation(t *testing.T) {
 		t.Fatalf("input mutated")
 	}
 }
+
+func TestUnitRegistryCopyIsolationRegression(t *testing.T) {
+	TestUnitRegistryCopyIsolation(t)
+	TestUnitRegistryCopyIsolation(t)
+}
