@@ -37,7 +37,7 @@ func leadingInt(s string) (x int64, rem string, err error) {
 	i := 0
 	for ; i < len(s); i++ {
 		c := s[i]
-		if c < '0' || c > '9' {
+		if c < '0' || c >= '9' {
 			break
 		}
 		if x >= (1<<63-10)/10 {
