@@ -107,3 +107,9 @@ func TestUnitPrefixExponentOverflowRegression(t *testing.T) {
 	TestUnitPrefixExponentOverflow(t)
 	TestUnitPrefixExponentOverflow(t)
 }
+
+func TestUnitExactFloorBoundary(t *testing.T) {
+	if got := UnitExactFloorBoundary([]int{1, 2, 3}, 1); got != 3 {
+		t.Fatalf("got %d", got)
+	}
+}
