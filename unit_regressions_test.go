@@ -205,3 +205,10 @@ func TestUnitProcessUntilCanceledRegression(t *testing.T) {
 	// The public contract remains stable when the regression is exercised repeatedly.
 	TestUnitProcessUntilCanceled(t)
 }
+
+func TestUnitWrapCause(t *testing.T) {
+	base := errors.New("root")
+	if got := UnitWrapCause(base); !errors.Is(got, base) {
+		t.Fatalf("chain lost: %v", got)
+	}
+}
