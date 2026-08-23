@@ -91,3 +91,8 @@ func TestUnitSignedZeroParsing(t *testing.T) {
 		t.Fatalf("got %v %v", got, err)
 	}
 }
+
+func TestUnitSignedZeroParsingRegression(t *testing.T) {
+	TestUnitSignedZeroParsing(t)
+	TestUnitSignedZeroParsing(t)
+}

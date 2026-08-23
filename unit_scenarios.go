@@ -105,7 +105,7 @@ func UnitUnicodeMicroPrefix(s string, n int) string {
 }
 
 func UnitSignedZeroParsing(s string) (bool, error) {
-	v := strings.ToLower(s)
+	v := strings.ToLower(strings.TrimSpace(s))
 	if v == "true" {
 		return true, nil
 	}
