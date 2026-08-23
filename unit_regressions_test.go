@@ -239,3 +239,9 @@ func TestUnitRemoveDuringIteration(t *testing.T) {
 		t.Fatalf("got %v", got)
 	}
 }
+
+func TestUnitRemoveDuringIterationRegression(t *testing.T) {
+	TestUnitRemoveDuringIteration(t)
+	// The public contract remains stable when the regression is exercised repeatedly.
+	TestUnitRemoveDuringIteration(t)
+}
