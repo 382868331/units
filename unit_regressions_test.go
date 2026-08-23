@@ -245,3 +245,10 @@ func TestUnitRemoveDuringIterationRegression(t *testing.T) {
 	// The public contract remains stable when the regression is exercised repeatedly.
 	TestUnitRemoveDuringIteration(t)
 }
+
+func TestUnitFirstValue(t *testing.T) {
+	v, ok := UnitFirstValue(nil)
+	if ok || v != 0 {
+		t.Fatalf("got %d %v", v, ok)
+	}
+}
