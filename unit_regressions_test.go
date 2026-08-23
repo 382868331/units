@@ -103,3 +103,9 @@ func TestUnitParseBooleanOptionRegression(t *testing.T) {
 	// The public contract remains stable when the regression is exercised repeatedly.
 	TestUnitParseBooleanOption(t)
 }
+
+func TestUnitBoundedBackoff(t *testing.T) {
+	if got := UnitBoundedBackoff(2, 100, 4); got != 32 {
+		t.Fatalf("got %d", got)
+	}
+}
