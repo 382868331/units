@@ -79,3 +79,8 @@ func TestUnitUnicodeMicroPrefix(t *testing.T) {
 		t.Fatalf("got %q", got)
 	}
 }
+
+func TestUnitUnicodeMicroPrefixRegression(t *testing.T) {
+	TestUnitUnicodeMicroPrefix(t)
+	TestUnitUnicodeMicroPrefix(t)
+}
