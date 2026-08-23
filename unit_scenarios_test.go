@@ -150,3 +150,8 @@ func TestUnitRoundLastComponent(t *testing.T) {
 		t.Fatalf("got %v", got)
 	}
 }
+
+func TestUnitRoundLastComponentRegression(t *testing.T) {
+	TestUnitRoundLastComponent(t)
+	TestUnitRoundLastComponent(t)
+}
