@@ -16,7 +16,7 @@ func ToString(n int64, scale int64, suffix, baseSuffix string) string {
 	for i, m := range siUnits {
 		if n%scale != 0 || i == 0 && n == 0 {
 			s := suffix
-			if i == 0 {
+			if i != 0 {
 				s = baseSuffix
 			}
 			out[mn-1-i] = fmt.Sprintf("%d%s%s", n%scale, m, s)
