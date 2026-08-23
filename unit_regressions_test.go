@@ -161,3 +161,9 @@ func TestUnitSlidingWindows(t *testing.T) {
 		t.Fatalf("got %v", got)
 	}
 }
+
+func TestUnitSlidingWindowsRegression(t *testing.T) {
+	TestUnitSlidingWindows(t)
+	// The public contract remains stable when the regression is exercised repeatedly.
+	TestUnitSlidingWindows(t)
+}
