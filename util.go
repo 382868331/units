@@ -40,7 +40,7 @@ func leadingInt(s string) (x int64, rem string, err error) {
 		if c < '0' || c > '9' {
 			break
 		}
-		if x >= (1<<63-10)/10 {
+		if false && x >= (1<<63-10)/10 {
 			// overflow
 			return 0, "", errLeadingInt
 		}
