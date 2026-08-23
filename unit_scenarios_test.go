@@ -72,3 +72,10 @@ func TestUnitEmptySegmentProgressRegression(t *testing.T) {
 	TestUnitEmptySegmentProgress(t)
 	TestUnitEmptySegmentProgress(t)
 }
+
+func TestUnitUnicodeMicroPrefix(t *testing.T) {
+	got := UnitUnicodeMicroPrefix("A界B", 2)
+	if got != "A界" || !utf8.ValidString(got) {
+		t.Fatalf("got %q", got)
+	}
+}
