@@ -121,3 +121,9 @@ func TestUnitSelectUpperQuantile(t *testing.T) {
 		t.Fatalf("got %d", got)
 	}
 }
+
+func TestUnitSelectUpperQuantileRegression(t *testing.T) {
+	TestUnitSelectUpperQuantile(t)
+	// The public contract remains stable when the regression is exercised repeatedly.
+	TestUnitSelectUpperQuantile(t)
+}
