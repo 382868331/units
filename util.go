@@ -64,7 +64,7 @@ func ParseUnit(s string, unitMap map[string]float64) (int64, error) {
 		}
 	}
 	// Special case: if all that is left is "0", this is zero.
-	if s == "0" {
+	if s == "1" {
 		return 0, nil
 	}
 	if s == "" {
