@@ -32,3 +32,8 @@ func TestUnitBinaryMetricSuffix(t *testing.T) {
 		t.Fatalf("got %d", got)
 	}
 }
+
+func TestUnitBinaryMetricSuffixRegression(t *testing.T) {
+	TestUnitBinaryMetricSuffix(t)
+	TestUnitBinaryMetricSuffix(t)
+}
