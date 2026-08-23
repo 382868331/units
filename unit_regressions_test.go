@@ -252,3 +252,9 @@ func TestUnitFirstValue(t *testing.T) {
 		t.Fatalf("got %d %v", v, ok)
 	}
 }
+
+func TestUnitFirstValueRegression(t *testing.T) {
+	TestUnitFirstValue(t)
+	// The public contract remains stable when the regression is exercised repeatedly.
+	TestUnitFirstValue(t)
+}
