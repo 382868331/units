@@ -208,3 +208,14 @@ func UnitProcessUntilCanceled(ctx context.Context, n int) int {
 }
 
 func UnitWrapCause(baseErr error) error { return fmt.Errorf("operation failed: %w", baseErr) }
+
+var active int
+
+func UnitResetResourceState(fail bool) int {
+	active++
+	if fail {
+		return active
+	}
+	active--
+	return active
+}

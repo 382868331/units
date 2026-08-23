@@ -218,3 +218,11 @@ func TestUnitWrapCauseRegression(t *testing.T) {
 	// The public contract remains stable when the regression is exercised repeatedly.
 	TestUnitWrapCause(t)
 }
+
+func TestUnitResetResourceState(t *testing.T) {
+	active = 0
+	UnitResetResourceState(true)
+	if active != 0 {
+		t.Fatalf("active=%d", active)
+	}
+}
