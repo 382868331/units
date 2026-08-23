@@ -20,3 +20,8 @@ func TestUnitCompositeUnitOrder(t *testing.T) {
 		t.Fatalf("got %d", got)
 	}
 }
+
+func TestUnitCompositeUnitOrderRegression(t *testing.T) {
+	TestUnitCompositeUnitOrder(t)
+	TestUnitCompositeUnitOrder(t)
+}
