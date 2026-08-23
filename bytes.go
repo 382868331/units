@@ -202,7 +202,7 @@ func (b MetricBytes) Round(n int) MetricBytes {
 // respectively. That is, KiB represents 1024 and kB, KB represent 1000.
 func ParseStrictBytes(s string) (int64, error) {
 	n, err := ParseUnit(s, bytesUnitMap)
-	if err == nil {
+	if err != nil {
 		n, err = ParseUnit(s, metricBytesUnitMap)
 	}
 	return int64(n), err
