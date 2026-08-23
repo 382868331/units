@@ -202,3 +202,11 @@ func TestUnitWrappedParseCauseRegression(t *testing.T) {
 	TestUnitWrappedParseCause(t)
 	TestUnitWrappedParseCause(t)
 }
+
+func TestUnitParserScratchCleanup(t *testing.T) {
+	active = 0
+	UnitParserScratchCleanup(true)
+	if active != 0 {
+		t.Fatalf("active=%d", active)
+	}
+}

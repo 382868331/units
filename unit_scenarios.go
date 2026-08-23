@@ -208,3 +208,14 @@ func UnitParseCancellation(ctx context.Context, n int) int {
 }
 
 func UnitWrappedParseCause(baseErr error) error { return fmt.Errorf("operation failed: %w", baseErr) }
+
+var active int
+
+func UnitParserScratchCleanup(fail bool) int {
+	active++
+	if fail {
+		return active
+	}
+	active--
+	return active
+}
