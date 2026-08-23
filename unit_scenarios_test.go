@@ -96,3 +96,9 @@ func TestUnitSignedZeroParsingRegression(t *testing.T) {
 	TestUnitSignedZeroParsing(t)
 	TestUnitSignedZeroParsing(t)
 }
+
+func TestUnitPrefixExponentOverflow(t *testing.T) {
+	if got := UnitPrefixExponentOverflow(2, 100, 4); got != 32 {
+		t.Fatalf("got %d", got)
+	}
+}
