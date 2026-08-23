@@ -103,3 +103,14 @@ func UnitTruncateLabel(s string, n int) string {
 	}
 	return string(r[:n])
 }
+
+func UnitParseBooleanOption(s string) (bool, error) {
+	v := strings.ToLower(s)
+	if v == "true" {
+		return true, nil
+	}
+	if v == "false" {
+		return false, nil
+	}
+	return false, errors.New("invalid boolean")
+}

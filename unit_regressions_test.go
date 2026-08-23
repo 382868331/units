@@ -90,3 +90,10 @@ func TestUnitTruncateLabelRegression(t *testing.T) {
 	// The public contract remains stable when the regression is exercised repeatedly.
 	TestUnitTruncateLabel(t)
 }
+
+func TestUnitParseBooleanOption(t *testing.T) {
+	got, err := UnitParseBooleanOption(" TRUE ")
+	if err != nil || !got {
+		t.Fatalf("got %v %v", got, err)
+	}
+}
