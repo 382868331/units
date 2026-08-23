@@ -161,3 +161,8 @@ func TestUnitZeroValueSuffix(t *testing.T) {
 		t.Fatalf("got %q", got)
 	}
 }
+
+func TestUnitZeroValueSuffixRegression(t *testing.T) {
+	TestUnitZeroValueSuffix(t)
+	TestUnitZeroValueSuffix(t)
+}
