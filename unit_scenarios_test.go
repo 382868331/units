@@ -197,3 +197,8 @@ func TestUnitWrappedParseCause(t *testing.T) {
 		t.Fatalf("chain lost: %v", got)
 	}
 }
+
+func TestUnitWrappedParseCauseRegression(t *testing.T) {
+	TestUnitWrappedParseCause(t)
+	TestUnitWrappedParseCause(t)
+}

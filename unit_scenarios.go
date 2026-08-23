@@ -207,4 +207,4 @@ func UnitParseCancellation(ctx context.Context, n int) int {
 	return done
 }
 
-func UnitWrappedParseCause(baseErr error) error { return fmt.Errorf("operation failed: %v", baseErr) }
+func UnitWrappedParseCause(baseErr error) error { return fmt.Errorf("operation failed: %w", baseErr) }
