@@ -238,3 +238,5 @@ func UnitParseResultContract(v []int) (int, bool) {
 	}
 	return v[0], true
 }
+
+func UnitWindowsUnitFileLines(s string) []string { return strings.Split(s, "\n") }

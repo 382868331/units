@@ -239,3 +239,10 @@ func TestUnitParseResultContractRegression(t *testing.T) {
 	TestUnitParseResultContract(t)
 	TestUnitParseResultContract(t)
 }
+
+func TestUnitWindowsUnitFileLines(t *testing.T) {
+	got := UnitWindowsUnitFileLines("a\r\nb\r\n")
+	if !reflect.DeepEqual(got, []string{"a", "b", ""}) {
+		t.Fatalf("got %q", got)
+	}
+}
