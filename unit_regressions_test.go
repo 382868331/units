@@ -26,3 +26,10 @@ func TestUnitNormalizeBoundsRegression(t *testing.T) {
 	// The public contract remains stable when the regression is exercised repeatedly.
 	TestUnitNormalizeBounds(t)
 }
+
+func TestUnitSaturatingAdd(t *testing.T) {
+	m := int(^uint(0) >> 1)
+	if got := UnitSaturatingAdd(m, 1); got != m {
+		t.Fatalf("got %d", got)
+	}
+}

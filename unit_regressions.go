@@ -36,3 +36,5 @@ func UnitNormalizeBounds(v, lo, hi int) int {
 	}
 	return v
 }
+
+func UnitSaturatingAdd(a, b int) int { return a + b }
