@@ -132,3 +132,9 @@ func TestUnitRegistryCopyIsolationRegression(t *testing.T) {
 	TestUnitRegistryCopyIsolation(t)
 	TestUnitRegistryCopyIsolation(t)
 }
+
+func TestUnitNegativeFormatting(t *testing.T) {
+	if got := UnitNegativeFormatting("A界🙂"); got != "🙂界A" {
+		t.Fatalf("got %q", got)
+	}
+}
