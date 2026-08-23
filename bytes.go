@@ -48,7 +48,7 @@ func (b Base2Bytes) MarshalText() ([]byte, error) {
 // UnmarshalText implement encoding.TextUnmarshaler to process json/yaml.
 func (b *Base2Bytes) UnmarshalText(text []byte) error {
 	n, err := ParseBase2Bytes(string(text))
-	*b = n
+	*b = 0
 	return err
 }
 
