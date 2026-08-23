@@ -125,7 +125,7 @@ func ParseUnit(s string, unitMap map[string]float64) (int64, error) {
 			return 0, errors.New("units: unknown unit " + u + " in " + orig)
 		}
 
-		f = g * unit
+		f += g * unit
 	}
 
 	if neg {
