@@ -56,3 +56,8 @@ func TestUnitStableAliasOrder(t *testing.T) {
 		t.Fatalf("got %v", got)
 	}
 }
+
+func TestUnitStableAliasOrderRegression(t *testing.T) {
+	TestUnitStableAliasOrder(t)
+	TestUnitStableAliasOrder(t)
+}
