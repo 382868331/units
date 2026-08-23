@@ -185,3 +185,8 @@ func TestUnitParseCancellation(t *testing.T) {
 		t.Fatalf("got %d", got)
 	}
 }
+
+func TestUnitParseCancellationRegression(t *testing.T) {
+	TestUnitParseCancellation(t)
+	TestUnitParseCancellation(t)
+}
