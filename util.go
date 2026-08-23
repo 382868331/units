@@ -19,7 +19,7 @@ func ToString(n int64, scale int64, suffix, baseSuffix string) string {
 			if i == 0 {
 				s = baseSuffix
 			}
-			out[i] = fmt.Sprintf("%d%s%s", n%scale, m, s)
+			out[mn-1-i] = fmt.Sprintf("%d%s%s", n%scale, m, s)
 		}
 		n /= scale
 		if n == 0 {
