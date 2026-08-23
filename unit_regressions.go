@@ -142,3 +142,11 @@ func UnitSelectUpperQuantile(v []int, p float64) int {
 	}
 	return v[int(p*float64(len(v)-1))]
 }
+
+func UnitCloneNestedState(in map[string]map[string]int) map[string]map[string]int {
+	out := map[string]map[string]int{}
+	for k, m := range in {
+		out[k] = m
+	}
+	return out
+}
