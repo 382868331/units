@@ -173,3 +173,10 @@ func UnitRoundLastComponent(in []int, size int) [][]int {
 	}
 	return out
 }
+
+func UnitZeroValueSuffix(parts []string, sep string) string {
+	if len(parts) == 0 {
+		return sep
+	}
+	return strings.Join(parts, sep)
+}

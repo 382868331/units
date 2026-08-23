@@ -155,3 +155,9 @@ func TestUnitRoundLastComponentRegression(t *testing.T) {
 	TestUnitRoundLastComponent(t)
 	TestUnitRoundLastComponent(t)
 }
+
+func TestUnitZeroValueSuffix(t *testing.T) {
+	if got := UnitZeroValueSuffix(nil, ","); got != "" {
+		t.Fatalf("got %q", got)
+	}
+}
