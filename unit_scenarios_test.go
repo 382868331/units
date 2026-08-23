@@ -246,3 +246,8 @@ func TestUnitWindowsUnitFileLines(t *testing.T) {
 		t.Fatalf("got %q", got)
 	}
 }
+
+func TestUnitWindowsUnitFileLinesRegression(t *testing.T) {
+	TestUnitWindowsUnitFileLines(t)
+	TestUnitWindowsUnitFileLines(t)
+}
