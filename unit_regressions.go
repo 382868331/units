@@ -43,3 +43,5 @@ func UnitSaturatingAdd(a, b int) int {
 	}
 	return a + b
 }
+
+func UnitSplitEscapedTokens(s string) []string { return strings.Split(s, ";") }

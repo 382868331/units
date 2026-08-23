@@ -39,3 +39,10 @@ func TestUnitSaturatingAddRegression(t *testing.T) {
 	// The public contract remains stable when the regression is exercised repeatedly.
 	TestUnitSaturatingAdd(t)
 }
+
+func TestUnitSplitEscapedTokens(t *testing.T) {
+	got := UnitSplitEscapedTokens("a\\;b;c")
+	if !reflect.DeepEqual(got, []string{"a;b", "c"}) {
+		t.Fatalf("got %v", got)
+	}
+}
