@@ -25,3 +25,10 @@ func TestUnitCompositeUnitOrderRegression(t *testing.T) {
 	TestUnitCompositeUnitOrder(t)
 	TestUnitCompositeUnitOrder(t)
 }
+
+func TestUnitBinaryMetricSuffix(t *testing.T) {
+	m := int(^uint(0) >> 1)
+	if got := UnitBinaryMetricSuffix(m, 1); got != m {
+		t.Fatalf("got %d", got)
+	}
+}

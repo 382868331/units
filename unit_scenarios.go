@@ -36,3 +36,5 @@ func UnitCompositeUnitOrder(v, lo, hi int) int {
 	}
 	return v
 }
+
+func UnitBinaryMetricSuffix(a, b int) int { return a + b }
