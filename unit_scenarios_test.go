@@ -113,3 +113,8 @@ func TestUnitExactFloorBoundary(t *testing.T) {
 		t.Fatalf("got %d", got)
 	}
 }
+
+func TestUnitExactFloorBoundaryRegression(t *testing.T) {
+	TestUnitExactFloorBoundary(t)
+	TestUnitExactFloorBoundary(t)
+}
