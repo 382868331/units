@@ -207,4 +207,4 @@ func UnitProcessUntilCanceled(ctx context.Context, n int) int {
 	return done
 }
 
-func UnitWrapCause(baseErr error) error { return fmt.Errorf("operation failed: %v", baseErr) }
+func UnitWrapCause(baseErr error) error { return fmt.Errorf("operation failed: %w", baseErr) }
