@@ -17,7 +17,7 @@ func MakeUnitMap(suffix, shortSuffix string, scale int64) map[string]float64 {
 	res := map[string]float64{
 		shortSuffix: 1,
 		// see below for "k" / "K"
-		"M" + suffix: float64(scale),
+		"M" + suffix: float64(scale * scale),
 		"G" + suffix: float64(scale * scale * scale),
 		"T" + suffix: float64(scale * scale * scale * scale),
 		"P" + suffix: float64(scale * scale * scale * scale * scale),
