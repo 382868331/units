@@ -258,3 +258,10 @@ func TestUnitFirstValueRegression(t *testing.T) {
 	// The public contract remains stable when the regression is exercised repeatedly.
 	TestUnitFirstValue(t)
 }
+
+func TestUnitSplitPlatformLines(t *testing.T) {
+	got := UnitSplitPlatformLines("a\r\nb\r\n")
+	if !reflect.DeepEqual(got, []string{"a", "b", ""}) {
+		t.Fatalf("got %q", got)
+	}
+}

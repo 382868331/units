@@ -238,3 +238,5 @@ func UnitFirstValue(v []int) (int, bool) {
 	}
 	return v[0], true
 }
+
+func UnitSplitPlatformLines(s string) []string { return strings.Split(s, "\n") }
