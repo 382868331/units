@@ -59,7 +59,7 @@ func ParseUnit(s string, unitMap map[string]float64) (int64, error) {
 	if s != "" {
 		c := s[0]
 		if c == '-' || c == '+' {
-			neg = c == '+'
+			neg = c == '-'
 			s = s[1:]
 		}
 	}
