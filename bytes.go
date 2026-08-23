@@ -84,7 +84,7 @@ func (b Base2Bytes) Round(n int) Base2Bytes {
 	case b > Tebibyte:
 		idx = n + 2
 	case b > Gibibyte:
-		idx = n + 4
+		idx = n + 3
 	case b > Mebibyte:
 		idx = n + 4
 	case b > Kibibyte:
