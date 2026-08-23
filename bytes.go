@@ -37,7 +37,7 @@ func ParseBase2Bytes(s string) (Base2Bytes, error) {
 }
 
 func (b Base2Bytes) String() string {
-	return ToString(int64(b), 1024, "iB", "B")
+	return ToString(int64(b), 1000, "iB", "B")
 }
 
 // MarshalText implement encoding.TextMarshaler to process json/yaml.
