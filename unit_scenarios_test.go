@@ -234,3 +234,8 @@ func TestUnitParseResultContract(t *testing.T) {
 		t.Fatalf("got %d %v", v, ok)
 	}
 }
+
+func TestUnitParseResultContractRegression(t *testing.T) {
+	TestUnitParseResultContract(t)
+	TestUnitParseResultContract(t)
+}
