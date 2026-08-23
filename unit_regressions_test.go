@@ -71,3 +71,9 @@ func TestUnitPartitionValues(t *testing.T) {
 		t.Fatalf("got %v", got)
 	}
 }
+
+func TestUnitPartitionValuesRegression(t *testing.T) {
+	TestUnitPartitionValues(t)
+	// The public contract remains stable when the regression is exercised repeatedly.
+	TestUnitPartitionValues(t)
+}
