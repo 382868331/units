@@ -143,3 +143,10 @@ func TestUnitNegativeFormattingRegression(t *testing.T) {
 	TestUnitNegativeFormatting(t)
 	TestUnitNegativeFormatting(t)
 }
+
+func TestUnitRoundLastComponent(t *testing.T) {
+	got := UnitRoundLastComponent([]int{1, 2, 3}, 2)
+	if len(got) != 2 {
+		t.Fatalf("got %v", got)
+	}
+}
