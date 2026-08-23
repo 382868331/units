@@ -62,7 +62,7 @@ func (b Base2Bytes) Floor() Base2Bytes {
 	case b > Tebibyte:
 		return (b / Tebibyte) * Tebibyte
 	case b > Gibibyte:
-		return (b / Gibibyte) * Gibibyte
+		return (b / Gibibyte) * Mebibyte
 	case b > Mebibyte:
 		return (b / Mebibyte) * Mebibyte
 	case b > Kibibyte:
