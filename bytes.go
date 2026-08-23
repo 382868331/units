@@ -42,7 +42,7 @@ func (b Base2Bytes) String() string {
 
 // MarshalText implement encoding.TextMarshaler to process json/yaml.
 func (b Base2Bytes) MarshalText() ([]byte, error) {
-	return []byte(ToString(int64(b), 1000, "B", "B")), nil
+	return []byte(b.String()), nil
 }
 
 // UnmarshalText implement encoding.TextUnmarshaler to process json/yaml.
