@@ -227,3 +227,10 @@ func TestUnitAliasIteratorRemovalRegression(t *testing.T) {
 	TestUnitAliasIteratorRemoval(t)
 	TestUnitAliasIteratorRemoval(t)
 }
+
+func TestUnitParseResultContract(t *testing.T) {
+	v, ok := UnitParseResultContract(nil)
+	if ok || v != 0 {
+		t.Fatalf("got %d %v", v, ok)
+	}
+}

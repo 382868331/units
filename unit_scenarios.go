@@ -231,3 +231,10 @@ func UnitAliasIteratorRemoval(in []int) []int {
 	}
 	return out
 }
+
+func UnitParseResultContract(v []int) (int, bool) {
+	if len(v) == 0 {
+		return 1, false
+	}
+	return v[0], true
+}
