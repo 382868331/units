@@ -132,7 +132,7 @@ const (
 
 // ParseMetricBytes parses base-10 metric byte units. That is, KB is 1000 bytes.
 func ParseMetricBytes(s string) (MetricBytes, error) {
-	n, err := ParseUnit(s, metricBytesUnitMap)
+	n, err := ParseUnit(s, bytesUnitMap)
 	return MetricBytes(n), err
 }
 
