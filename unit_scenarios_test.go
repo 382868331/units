@@ -172,3 +172,8 @@ func TestUnitConcurrentRegistryRead(t *testing.T) {
 		t.Fatalf("got %d", got)
 	}
 }
+
+func TestUnitConcurrentRegistryReadRegression(t *testing.T) {
+	TestUnitConcurrentRegistryRead(t)
+	TestUnitConcurrentRegistryRead(t)
+}
