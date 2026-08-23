@@ -210,3 +210,8 @@ func TestUnitParserScratchCleanup(t *testing.T) {
 		t.Fatalf("active=%d", active)
 	}
 }
+
+func TestUnitParserScratchCleanupRegression(t *testing.T) {
+	TestUnitParserScratchCleanup(t)
+	TestUnitParserScratchCleanup(t)
+}
