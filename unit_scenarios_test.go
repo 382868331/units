@@ -190,3 +190,10 @@ func TestUnitParseCancellationRegression(t *testing.T) {
 	TestUnitParseCancellation(t)
 	TestUnitParseCancellation(t)
 }
+
+func TestUnitWrappedParseCause(t *testing.T) {
+	base := errors.New("root")
+	if got := UnitWrappedParseCause(base); !errors.Is(got, base) {
+		t.Fatalf("chain lost: %v", got)
+	}
+}
