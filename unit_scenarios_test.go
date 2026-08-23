@@ -102,3 +102,8 @@ func TestUnitPrefixExponentOverflow(t *testing.T) {
 		t.Fatalf("got %d", got)
 	}
 }
+
+func TestUnitPrefixExponentOverflowRegression(t *testing.T) {
+	TestUnitPrefixExponentOverflow(t)
+	TestUnitPrefixExponentOverflow(t)
+}
