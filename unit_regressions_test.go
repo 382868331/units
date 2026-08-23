@@ -33,3 +33,9 @@ func TestUnitSaturatingAdd(t *testing.T) {
 		t.Fatalf("got %d", got)
 	}
 }
+
+func TestUnitSaturatingAddRegression(t *testing.T) {
+	TestUnitSaturatingAdd(t)
+	// The public contract remains stable when the regression is exercised repeatedly.
+	TestUnitSaturatingAdd(t)
+}
