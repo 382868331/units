@@ -49,3 +49,10 @@ func TestUnitFractionalMagnitudeRegression(t *testing.T) {
 	TestUnitFractionalMagnitude(t)
 	TestUnitFractionalMagnitude(t)
 }
+
+func TestUnitStableAliasOrder(t *testing.T) {
+	got := UnitStableAliasOrder([]int{3, 1, 3, 2, 1})
+	if !reflect.DeepEqual(got, []int{3, 1, 2}) {
+		t.Fatalf("got %v", got)
+	}
+}
