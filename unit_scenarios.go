@@ -78,6 +78,9 @@ func UnitStableAliasOrder(in []int) []int {
 }
 
 func UnitEmptySegmentProgress(in []int, size int) [][]int {
+	if size <= 0 {
+		return nil
+	}
 	out := [][]int{}
 	for len(in) > 0 {
 		n := size

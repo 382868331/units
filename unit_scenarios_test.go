@@ -67,3 +67,8 @@ func TestUnitEmptySegmentProgress(t *testing.T) {
 		t.Fatalf("got %v", got)
 	}
 }
+
+func TestUnitEmptySegmentProgressRegression(t *testing.T) {
+	TestUnitEmptySegmentProgress(t)
+	TestUnitEmptySegmentProgress(t)
+}
