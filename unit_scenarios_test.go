@@ -215,3 +215,10 @@ func TestUnitParserScratchCleanupRegression(t *testing.T) {
 	TestUnitParserScratchCleanup(t)
 	TestUnitParserScratchCleanup(t)
 }
+
+func TestUnitAliasIteratorRemoval(t *testing.T) {
+	got := UnitAliasIteratorRemoval([]int{2, 4, 5, 6})
+	if !reflect.DeepEqual(got, []int{5}) {
+		t.Fatalf("got %v", got)
+	}
+}
