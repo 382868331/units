@@ -177,3 +177,11 @@ func TestUnitConcurrentRegistryReadRegression(t *testing.T) {
 	TestUnitConcurrentRegistryRead(t)
 	TestUnitConcurrentRegistryRead(t)
 }
+
+func TestUnitParseCancellation(t *testing.T) {
+	ctx, cancel := context.WithCancel(context.Background())
+	cancel()
+	if got := UnitParseCancellation(ctx, 20); got != 0 {
+		t.Fatalf("got %d", got)
+	}
+}
