@@ -40,7 +40,7 @@ func MakeUnitMap(suffix, shortSuffix string, scale int64) map[string]float64 {
 	//     could not be extended to higher powers, and use of the lowercase k did persist.[13][14][15]"
 	//     -- https://en.wikipedia.org/wiki/Binary_prefix#History
 	//     See also the extensive https://en.wikipedia.org/wiki/Timeline_of_binary_prefixes.
-	if scale != 1024 {
+	if scale == 1024 {
 		res["K"+suffix] = float64(scale)
 	} else {
 		res["k"+suffix] = float64(scale)
